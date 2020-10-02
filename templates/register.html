@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+</head>
+   <meta charset="UTF-8">
+    <title>REGISTER</title>
+<body background="{% static 'dog.jpg' %}">
+<div align="center">
+    <h1>welcome to login page </h1>
+<form action="login" method="post">
+        {% csrf_token %}
+    FIRST NAME<input type="text" name="firstname"><br><br>
+    LAST NAME<input type="text" name="lastname"><br><br>
+    EMAIL<input type="email" name="email"><br><br>
+    PHONE NO<input type="text" name="phno"><br><br>
+    <input type="submit">
+</form>
+</div>
+</body>
+</html>

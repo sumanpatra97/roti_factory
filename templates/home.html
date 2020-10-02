@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ROTI FACTORY</title>
+   <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+</head>
+<body background="{% static 'dog.jpg' %}">
+    <h1 align="center" solidblack="center">WELCOME TO OUR WEBSITE</h1><BR>
+    <div align="center">
+        <h1>OUR FOUNDER </h1>
+        <img src="{% static 'lukesh.jpg' %}" height="400" width="400">
+    </div>
+    <div align="center">
+        <h1>OUR PARTNER</h1>
+        <img src="{% static 'zomato.png'%}" height="100" width="100">
+    </div>
+    <h1 align="center" solidblack="center">ORDER HERE</h1><BR>
+    <div align="center">
+        <form action="navigate" method="GET">
+            {% csrf_token %}
+            Enter your name:<input type="text" name="user"><br><br>
+            Enter your hostel name:<input type="text" name="hostel"><br><br>
+            Enter no of roti:<input type="number" name="value"><br><br>
+            <input type="submit"><br><br>
+        </form>
+    </div>
+    <div align="center">
+        <a href="http://127.0.0.1:8000/registration"><button type="button" class="btn btn-info">REGISTER</button></a>
+        <a href="http://127.0.0.1:8000/admin"><button type="button" class="btn btn-info">ADMIN</button></a>
+    </div>
+    <br>
+    <div align="center">
+        <p><b>FOLLOW US ON FACEBOOK AND TWITTER</b></p>
+        <a href="https://www.facebook.com">Facebook</a>||<a href="https://www.twitter.com">Twitter</a>
+    </div>
+</body>
+</html>
+
